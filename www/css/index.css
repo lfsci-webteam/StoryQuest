@@ -112,3 +112,9 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+/*************************************************************************/
+
+.ui-header .ui-title {
+    margin: .6em 10% .8em;
+}
