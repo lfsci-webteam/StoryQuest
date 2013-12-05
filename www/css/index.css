@@ -114,7 +114,37 @@ h1 {
 }
 
 /*************************************************************************/
+/* General Story-Mode Styles */
 
 .ui-header .ui-title {
     margin: .6em 10% .8em;
+}
+
+
+/*************************************************************************/
+/* Horse Race Styles */
+
+.ponyList
+{
+	padding-left: 0px;
+}
+
+.ponyList li
+{
+	list-style-type: none;
+	padding: 5px 0px;
+	border-top: solid 1px #ff00ff;
+	border-bottom: solid 1px #ff00ff;
+	border-collapse: collapse;
+	margin-top: -1px;
+}
+
+	.ponylist li:first-child
+	{
+		margin-top: 0px;
+	}
+
+.pony
+{
+	transition-duration: 1s;
 }

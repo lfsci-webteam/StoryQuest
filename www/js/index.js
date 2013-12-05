@@ -23,7 +23,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         $.mobile.changePage("#Home", { transition: "fade" });
-
     },
 
 
