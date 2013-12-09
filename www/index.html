@@ -29,7 +29,7 @@
 	<div data-role="page" id="Home">
 		<div data-role="content">
 			<a data-role="button" href="#Panel1" data-transition="fade">Begin Quest</a>
-			<a data-role="button" href="#horseRace" data-transition="fade">Horse Race</a>
+			<a data-role="button" href="#pickPony" data-transition="fade">Horse Race</a>
 			<a data-role="button" href="#Credits" data-transition="fade">Credits</a>
 		</div>
 	</div>
@@ -136,6 +136,21 @@
             <a data-role="button" data-icon="arrow-r" href="#Panel10" data-transition="slide">a dress.</a>
 			<a data-role="button" data-icon="arrow-r" href="#Panel11" data-transition="slide">a toy.</a>
 			<a data-role="button" data-icon="arrow-r" href="#Panel12" data-transition="slide">music.</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="pickPony">
+		<div data-role="content">
+			Everyone's ready for the big race. Which pony will win?
+			<select id="selectPony">
+				<option value="appleJack">Apple Jack</option>
+				<option value="fluttershy">Fluttershy</option>
+				<option value="pinky">Pinky Pie</option>
+				<option value="rainbow">Rainbow Dash</option>
+				<option value="rarity">Rarity</option>
+				<option value="twilight">Twilight Sparkle</option>
+			</select>
+			<a data-role="button" href="#horseRace" data-transition="fade">Begin!</a>
 		</div>
 	</div>
 
