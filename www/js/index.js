@@ -32,6 +32,7 @@ var app = {
 		$('#raceContent').height($(window).height());
 		
 		$('#horseRace').on("pagebeforeshow", function () {
+			localStorage['race'] = true;
 			$('.pony').css('padding-left', '0px');
 			if (chosenPony == null)
 				$.mobile.changePage("#placeBet", { transition: "pop" });
@@ -45,7 +46,35 @@ var app = {
 
 		});
 
-		$.mobile.changePage("#Home", { transition: "fade" });
+		$('#Home').on("pagebeforeshow", function () {
+			if (localStorage['race'] == null) {
+				$('#raceLink').hide();
+			}
+			else {
+				$('#raceLink').show();
+			}
+		});
+		$('#Home').on("pagehide", function () {
+		});
+
+		$('#Credits').on("pageshow", function () {
+			setTimeout(function () {
+				document.getElementById('swMusic').play();
+			}, 2000);
+		});
+
+		$('#Credits').on("pagehide", function () {
+			document.getElementById('swMusic').pause();
+			document.getElementById('swMusic').currentTime = 0;
+		});
+
+		if (localStorage['first-time'] == null) {
+			$.mobile.changePage("#Credits", { transition: "fade" });
+			localStorage['first-time'] = false;
+		}
+		else {
+			$.mobile.changePage("#Home", { transition: "fade" });
+		}
 	},
 };
 
@@ -58,7 +87,7 @@ function movePonies() {
 			padLeft = '0%';
 		}
 		var start = padLeft.substring(0, padLeft.length - 1);
-		var end = parseInt(start) + getRandomInt(50, 60);
+		var end = parseInt(start) + getRandomInt(5, 10);
 		// potential winner
 		if (end > 90) {
 			clearInterval(intervalID);
@@ -86,7 +115,7 @@ function movePonies() {
 		}
 		alert("And the winner is: " + candidates[bestIndex].Name);
 		if (candidates[bestIndex].id == chosenPony) {
-			alert("You Win");
+			$.mobile.changePage("#Panel25", { transition: "fade" });
 		}
 		else {
 			$.mobile.changePage("#noPrize", { transition: "fade" });

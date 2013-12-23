@@ -27,10 +27,48 @@
 		</div>
 	</div>
 	<div data-role="page" id="Home">
-		<div data-role="content">
+		<div style="background-color: transparent; width: 80%; padding: 10%;">
+			<div id="titleText">Story Quest</div>
 			<a data-role="button" href="#Panel1" data-transition="fade">Begin Quest</a>
-			<a data-role="button" href="#horseRace" data-transition="fade">Horse Race</a>
+			<a data-role="button" id="raceLink" href="#horseRace" data-transition="fade">Horse Race</a>
 			<a data-role="button" href="#Credits" data-transition="fade">Credits</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="Credits" style="background-color: black;">
+		<div data-role="header">
+			<a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-left" href="#Home" data-transition="slide" data-direction="reverse">Home</a>
+			<h1>Use the Force, Luke!</h1>
+		</div>
+		<div data-role="content" style="background-color: black;">
+			<p id="creditStart">
+				A short time ago
+				<br />
+				in a kingdom far, far away&hellip;
+			</p>
+			<h1 class="creditHeaders">Story Quest</h1>
+			<div id="titles">
+				<div id="titlecontent">
+					<p class="center">
+						Story Quest<br>
+						Rise of the Present Master
+					</p>
+					<p>It is a period of Christmas war.</p>
+					<p>The good King of Happy Valley must find a suitable gift for his bride, but time is running out, and the peasants are restless....</p>
+					<p>Game Design by Kevin Bauer</p>
+					<p>Story by Kevin Bauer</p>
+					<p>Art by Leslie Rader</p>
+					<p>Game Development and Testing by Kevin and Tori Bauer</p>
+					<p>
+						I love you Jessica! I hope you have as much fun with this present as I did. You make me smile every day, and I want you to know you make
+					every day an adventure.
+					</p>
+					<p>Merry Christmas!</p>
+				</div>
+				<audio id="swMusic" preload="auto">
+					<source src="sounds/sw.mp3" type="audio/mpeg">
+				</audio>
+			</div>
 		</div>
 	</div>
 
@@ -41,7 +79,8 @@
 		</div>
 		<div data-role="content">
 			Once upon a time there was a valiant Prince who married a beautiful Princess. They became the King and Queen of a magical castle in a beautiful happy valley.
-            <a data-role="button" data-icon="arrow-r" href="#Panel2" data-transition="slide">Next Page</a>
+            <img src="img/panel1.jpg" style="width: 100%" />
+			<a data-role="button" data-icon="arrow-r" href="#Panel2" data-transition="slide">Next Page</a>
 		</div>
 	</div>
 
@@ -65,7 +104,9 @@
 		</div>
 		<div data-role="content">
 			His Princely instincts aroused by the chance of adventure, the King waited until the queen was visiting the Royal Beauticians with her ladies-in-waiting, entrusted the princess to the Queen of France in the castle across the street, and set off in pursuit of the most worthy of gifts for his bride.
-			<img src="img/panel3.jpg" style="width: 100%" />
+			<div style="width: 100%; text-align: center;">
+				<img src="img/panel3.jpg" style="height: 380px" />
+			</div>
 			<a data-role="button" data-icon="arrow-r" href="#Panel4" data-transition="slide">Next Page</a>
 		</div>
 	</div>
@@ -104,7 +145,9 @@
 			<h1>A Black Friday</h1>
 		</div>
 		<div data-role="content">
-			Upon arriving at Wal-Mart, the King was faced with a harrowing sight: the owners of the Wal-Mart turned out to be a group of evil necromancers who had cursed the peasants! Driven mad with avarice, they were pillaging every store in sight and running amok. Despite his great strength and valor, the king was trampled and his knights had to carry him to the Utah Valley Regional Apothecary.
+			Upon arriving at Wal-Mart, the King was faced with a harrowing sight: the owners of the Wal-Mart turned out to be a group of evil necromancers who had cursed the peasants! Driven mad with avarice, they were pillaging every store in sight and running amok. 
+			<img src="img/panel6.jpg" style="width: 100%" />
+			Despite his great strength and valor, the king was trampled and his knights had to carry him to the Utah Valley Regional Apothecary.
             <a data-role="button" data-icon="arrow-r" href="#Panel7" data-transition="slide">Next Page</a>
 		</div>
 	</div>
@@ -112,11 +155,12 @@
 	<div data-role="page" id="Panel7">
 		<div data-role="header">
 			<a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-left" href="#Home" data-transition="slide" data-direction="reverse">Home</a>
-			<h1>Chicks Dig Scars</h1>
+			<h1>Curse you Perry the Platypus!</h1>
 		</div>
 		<div data-role="content">
 			The Queen was touched by the King’s bravery in thus risking his person to defend her honor, and sat by his sickbed until his recovery. “O gallant king”, she declared, “your bravery is more than enough gift for me. Also, your new battle scars are quite dashing!”
-            <a data-role="button" href="#noPrize" data-transition="slide">The end</a>
+			 <img src="img/panel7.jpg" style="width: 100%" />
+			<a data-role="button" href="#noPrize" data-transition="slide">The end</a>
 		</div>
 	</div>
 
@@ -139,7 +183,9 @@
 			<h1>It's a Mall World</h1>
 		</div>
 		<div data-role="content">
-			Upon arriving in the Disney Store the brave King was greeted with the sight of hundreds of amazing toys, dozens of dresses the size of the princess, and strange electronic discs enchanted to play music and movies. Unsure how to begin, the King asked the storekeeper to help him find ….
+			Upon arriving in the Disney Store the brave King was greeted with the sight of hundreds of amazing toys, dozens of dresses the size of the princess, and strange electronic discs enchanted to play music and movies. 
+			<img src="img/panel9.jpg" style="width: 100%" />
+			Unsure how to begin, the King asked the storekeeper to help him find ….
             <a data-role="button" data-icon="arrow-r" href="#Panel10" data-transition="slide">a dress.</a>
 			<a data-role="button" data-icon="arrow-r" href="#Panel11" data-transition="slide">a toy.</a>
 			<a data-role="button" data-icon="arrow-r" href="#Panel12" data-transition="slide">music.</a>
@@ -171,9 +217,9 @@
 		</div>
 		<div data-role="content">
 			<p>Seeing such an array of toys, the King immediately sent for his firstborn. Together, King and Princess romped among the toys until the mall closed and the storekeeper called security. As they exited the mall, there in front of them was the Queen!</p>
-			<img src="img/panel11_2.jpg" style="width: 100%" />
-			<p>“Did you have fun with Daddy today?” she inquired of the princess. “Having you play all afternoon with Daddy is the best Christmas gift I could ask for!” The queen didn’t notice the knowing smile on the King’s face as they entered their chariot and returned to the castle.</p>
 			<img src="img/panel11_1.jpg" style="width: 100%" />
+			<p>“Did you have fun with Daddy today?” she inquired of the princess. “Having you play all afternoon with Daddy is the best Christmas gift I could ask for!” The queen didn’t notice the knowing smile on the King’s face as they entered their chariot and returned to the castle.</p>
+			<img src="img/panel11_2.jpg" style="width: 100%" />
 			<a data-role="button" href="#noPrize" data-transition="slide">The end</a>
 		</div>
 	</div>
@@ -211,8 +257,9 @@
 			<h1>Ice, Ice, baby!</h1>
 		</div>
 		<div data-role="content">
-			Wearing only his casual robes, the king sets out to beg. However, within 5 minutes his royal teeth begin to chatter and his royal mucus freezes on his upper lip. Disheartened, he abandons his attempts to beg and, after thawing by the fire, shares a cup of hot chocolate with the Queen and Princess. He decides to try instead to use magic to get the gift.
+			Wearing only his casual robes, the king sets out to beg. However, within 5 minutes his royal teeth begin to chatter and his royal mucus freezes on his upper lip. Disheartened, he abandons his attempts to beg and, after thawing by the fire, shares a cup of hot chocolate with the Queen and Princess.
 			<img src="img/panel14.png" style="width: 100%" />
+			<a data-role="button" href="#noPrize" data-transition="slide">The end</a>
 		</div>
 	</div>
 
@@ -374,6 +421,20 @@
 				The King looked on as 6 ponies lined up to race. Since the currency of this realm seemed to be based on hay and straw, the King found it no harm to place a bet on the outcome.<p>
 					<img src="img/panel24.jpg" style="width: 100%" />
 					<a data-role="button" data-icon="arrow-r" href="#horseRace" data-transition="slide">Next Page</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="Panel25">
+		<div data-role="header">
+			<a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-left" href="#Home" data-transition="slide" data-direction="reverse">Home</a>
+			<h1>Help her Win the Crown</h1>
+		</div>
+		<div data-role="content">
+			<p>
+				The Ponies loved the King so much they decided to help with his gift by sending their princess home to teach the Royal Family about the magic of friendship.<p>
+					<img src="img/panel25.jpg" style="width: 100%" />
+			<p>Congratulations! This ending comes with a prize. Show this to the King and he shall lead thee to the Royal Stables and present you with your new PFF (Pony Friend Forever).</p>
+			<a data-role="button" data-icon="home" href="#Home" data-transition="slide">The end</a>
 		</div>
 	</div>
 
