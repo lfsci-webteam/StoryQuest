@@ -54,21 +54,19 @@ var app = {
 				$('#raceLink').show();
 			}
 		});
-		$('#Home').on("pagehide", function () {
-		});
 
-		$('#Credits').on("pageshow", function () {
-			setTimeout(function () {
-				var myaudio = new Media('sounds/sw.mp3', null, null);
-				myaudio.id = 'swMusic';
-				myaudio.play();
-			}, 2000);
-		});
+		//$('#Credits').on("pageshow", function () {
+		//	setTimeout(function () {
+		//		var myaudio = new Media('sounds/sw.mp3', null, null);
+		//		myaudio.id = 'swMusic';
+		//		myaudio.play();
+		//	}, 2000);
+		//});
 
-		$('#Credits').on("pagehide", function () {
-			document.getElementById('swMusic').pause();
-			document.getElementById('swMusic').currentTime = 0;
-		});
+		//$('#Credits').on("pagehide", function () {
+		//	document.getElementById('swMusic').pause();
+		//	document.getElementById('swMusic').currentTime = 0;
+		//});
 
 		if (localStorage['first-time'] == null) {
 			$.mobile.changePage("#Credits", { transition: "fade" });
