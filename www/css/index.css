@@ -146,23 +146,23 @@ h1 {
 
 .ponyList {
         padding-left: 0px;
+		height:100%;
+		margin: 0px;
 }
 
         .ponyList li {
                 list-style-type: none;
-                padding: 5px 0px;
-                border-top: solid 1px #ff00ff;
-                border-bottom: solid 1px #ff00ff;
-                border-collapse: collapse;
-                margin-top: -1px;
+                padding: 0px;
+				border-collapse: collapse;
+                background-image: url(images/road.png);
+				background-size:100% 100%;
+				height: 16%;
         }
-
-                .ponylist li:first-child {
-                        margin-top: 0px;
-                }
 
 .ui-content img.pony {
         border: none;
-        width: 5%;
+		height:100%;
+		width: auto;
         transition-duration: 1s;
+		margin:0px;
 }

@@ -1,4 +1,5 @@
 var intervalID;
+var chosenPony;
 
 var app = {
 	// Application Constructor
@@ -24,8 +25,24 @@ var app = {
 		listeningElement.setAttribute('style', 'display:none;');
 		receivedElement.setAttribute('style', 'display:block;');
 
-		$('#horseRace').on("pageshow", function () {
-			intervalID = setInterval(function () { movePonies(); }, 1000);
+		$(window).on("orientationchange", function (event) {
+			$('#raceContent').height($(window).height());
+		});
+
+		$('#raceContent').height($(window).height());
+		
+		$('#horseRace').on("pagebeforeshow", function () {
+			$('.pony').css('padding-left', '0px');
+			if (chosenPony == null)
+				$.mobile.changePage("#placeBet", { transition: "pop" });
+			else
+				intervalID = setInterval(function () { movePonies(); }, 1000);
+		});
+
+		$('.ponySelectButton').click(function () {
+			chosenPony = this.getAttribute("data-value");
+			$('.ui-dialog').dialog('close');
+
 		});
 
 		$.mobile.changePage("#Home", { transition: "fade" });
@@ -43,16 +60,14 @@ function movePonies() {
 			padLeft = '0%';
 		}
 		var start = padLeft.substring(0, padLeft.length - 1);
-		var end = parseInt(start) + getRandomInt(5, 10);
+		var end = parseInt(start) + getRandomInt(50, 60);
 		// potential winner
 		if (end > 90) {
 			clearInterval(intervalID);
-			candidates.push({ "Name": this.id, "distance": end });
+			candidates.push({ "Name": this.getAttribute("data-name"), "distance": end, "id": this.id });
 		}
 
 		this.style['padding-left'] = end + '%';
-
-
 	});
 
 	// if more than one crosses the finish line we pick the one that went 
@@ -72,6 +87,13 @@ function movePonies() {
 			bestIndex = 0;
 		}
 		alert("And the winner is: " + candidates[bestIndex].Name);
+		if (candidates[bestIndex].id == chosenPony) {
+			alert("You Win");
+		}
+		else {
+			$.mobile.changePage("#noPrize", { transition: "fade" });
+		}
+		chosenPony = null;
 	}
 }
 
