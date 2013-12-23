@@ -47,8 +47,6 @@ var app = {
 
 		$.mobile.changePage("#Home", { transition: "fade" });
 	},
-
-
 };
 
 function movePonies() {
