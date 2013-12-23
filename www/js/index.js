@@ -59,7 +59,9 @@ var app = {
 
 		$('#Credits').on("pageshow", function () {
 			setTimeout(function () {
-				document.getElementById('swMusic').play();
+				var myaudio = new Media('sounds/sw.mp3', null, null);
+				myaudio.id = 'swMusic';
+				myaudio.play();
 			}, 2000);
 		});
 
